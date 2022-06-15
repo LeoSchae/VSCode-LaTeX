@@ -1,0 +1,16 @@
+{
+  "files.exclude": {
+    "{**/*.out,**/*.fls,**/*.aux,**/*.log,**/*.synctex.gz,**/*.xdv,**/*.fdb_latexmk,**/*.toc}": true
+  },
+  "latex-workshop.chktex.enabled": false,
+  "[latex]": {
+    "editor.tabSize": 2,
+    "editor.insertSpaces": false,
+    "editor.renderWhitespace": "boundary",
+    "editor.wordWrap": "bounded" /* Wrap at 80 or at window width */
+  },
+  "latex-workshop.hover.preview.mathjax.extensions": [
+    "boldsymbol"
+  ],
+  "latex-workshop.latex.build.forceRecipeUsage": false,
+}

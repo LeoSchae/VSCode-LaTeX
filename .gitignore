@@ -1,0 +1,16 @@
+# Files ignored in versioning
+
+## pdflatex build files
+**/*.fls
+**/*.aux
+**/*.log
+**/*.synctex.gz
+**/*.xdv
+**/*.fdb_latexmk
+**/*.out
+**/*.pdf
+**/*.toc
+
+## pdfx build files
+**/*.xmpdata
+pdfa.xmpi
