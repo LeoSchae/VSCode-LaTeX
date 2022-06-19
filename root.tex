@@ -5,19 +5,20 @@
 %\usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 
-
-
-%\usepackage{fontspec}
 % Comment for faster pdf build time
 \usepackage[nopatch=eqnum]{microtype}
+
 % Modern font
 \usepackage{lmodern}
 
-% default size is 360pt x 584pt
+
+% default size of amsbook is 360pt x 584pt
 % uncomment for better ebook paper size (1.6:1 with small margins)(overflows can be problematic)
 %\usepackage[papersize={396pt,634pt},margin={18pt,25pt}]{geometry}
 
 \usepackage[english]{babel}
+
+% \lipsum command
 \usepackage{lipsum}
 
 \usepackage{xcolor, graphicx}
@@ -25,7 +26,7 @@
 
 \usepackage{hyperref}
 
-% Highlighted ToDo note
+% Highlighted Todo box
 \newcommand{\todo}[1]{\fcolorbox{purple}{white}{\textcolor{purple}{Todo:} #1}}
 
 % Bold symbols
@@ -37,6 +38,7 @@
 \newcommand*{\bxi}{{\boldsymbol{\xi}}}
 \newcommand*{\blog}{\boldsymbol{\log{}}}
 
+% \vec as bold not arrow
 \renewcommand*{\vec}[1]{\mathbf{#1}}
 
 % BB
@@ -60,10 +62,10 @@
 
 % Differential operator
 % TODO remove underline
-\newcommand*{\D}{\mathop{}\underline{\!\mathrm{d}}}
+\newcommand*{\D}{\mathop{}\!\mathrm{d}}
 
 % shortminus (for exponents)
-\DeclareMathSymbol{\shortminussymbol}{\mathbin}{AMSa}{"39} % chktex 18
+\DeclareMathSymbol{\shortminussymbol}{\mathbin}{AMSa}{"39}
 \newcommand{\shortminus}{\mskip-1mu\shortminussymbol\mskip-1mu}
 
 \theoremstyle{definition}
@@ -78,7 +80,7 @@
 \newtheorem{theorem}[definition]{Theorem}
 \newtheorem{corollary}[definition]{Corollary}
 
-% reference commands
+% reference commands (\ref* is only number no link)
 \newcommand*{\dref}[1]{\hyperref[#1]{Definition~\ref*{#1}}}
 \newcommand*{\lref}[1]{\hyperref[#1]{Lemma~\ref*{#1}}}
 \newcommand*{\tref}[1]{\hyperref[#1]{Theorem~\ref*{#1}}}
@@ -89,14 +91,19 @@
 % LTeX: enabled=true
 % LTeX: language=en-US
 
-\title{Title}
-\author{Author}
-\date{\today}
-
-% Comment to not show labels
+% Comment to not show labels on numbers and theorems
 \usepackage[inline]{showlabels}
 
 \begin{document}
+
+\title[Long Title]{Title}
+\author[Long Author]{Author}
+\subjclass[2020]{\todo{\url{https://mathscinet.ams.org/mathscinet/msc/msc2020.html}}}
+\address{Address}
+\email{e-mail}
+\date{\today}
+\thanks{Thanks to ...}
+
 
 \frontmatter{}
 
